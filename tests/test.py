@@ -1,5 +1,16 @@
-import python_example as m
+import pyUnionFind as uf
 
-assert m.__version__ == '0.0.1'
-assert m.add(1, 2) == 3
-assert m.subtract(1, 2) == -1
+foo = uf.DisjointSets(10)
+assert foo.size() == 10
+
+assert foo.rank(0) == 0
+
+foo.unite(0, 1)
+
+assert foo.same(0, 1)
+assert foo.same(1, 0)
+assert foo.rank(0) == 1
+
+assert not foo.same(0, 2)
+
+

@@ -18,7 +18,7 @@ __version__ = "0.0.1"
 #   reproducible builds (https://github.com/pybind/python_example/pull/53)
 
 ext_modules = [
-    Pybind11Extension("python_example",
+    Pybind11Extension("pyUnionFind",
         ["src/main.cpp"],
         # Example: passing in the version to the compiled code
         define_macros = [('VERSION_INFO', __version__)],
@@ -26,12 +26,12 @@ ext_modules = [
 ]
 
 setup(
-    name="python_example",
+    name="pyUnionFind",
     version=__version__,
     author="Sylvain Corlay",
     author_email="sylvain.corlay@gmail.com",
-    url="https://github.com/pybind/python_example",
-    description="A test project using pybind11",
+    url="https://github.com/rmrschub/pyUnionFind",
+    description="A UnionFind (aka Disjoint Sets) implementation in Python",
     long_description="",
     ext_modules=ext_modules,
     extras_require={"test": "pytest"},
