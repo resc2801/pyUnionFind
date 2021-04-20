@@ -28,11 +28,11 @@ ext_modules = [
 setup(
     name="pyUnionFind",
     version=__version__,
-    author="Sylvain Corlay",
-    author_email="sylvain.corlay@gmail.com",
+    author="René Schubotz",
+    author_email="rene.schubotz@dfki.de",
     url="https://github.com/rmrschub/pyUnionFind",
     description="A UnionFind (aka Disjoint Sets) implementation in Python",
-    long_description="",
+    long_description="A pybind11 wrapper around Wenzel Jakob's header-only C++11 implementation (https://github.com/wjakob/dset) of a UnionFind data structure.",
     ext_modules=ext_modules,
     extras_require={"test": "pytest"},
     # Currently, build_ext only provides an optional "highest supported C++

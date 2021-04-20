@@ -12,8 +12,33 @@ Installation
 
  - clone this repository
  - `pip install .`
+ 
+Uninstall via `pip uninstall pyUnionFind`. 
 
-Test call
+Usage
+---------
+```python
+foo = pyUnionFind.DisjointSets(m)
+```
+creates a UnionFind data structure `foo` consisting of `m` disjoint subsets.
+
+```python
+foo.unite(a,b)
+``` 
+merges subsets `a, b` into a single subset.
+
+```python
+foo.find(a)
+``` 
+returns the "representative" of the subset that `a` is an element of.  
+
+```python
+foo.same(a,b)
+``` 
+returns `True` iff `a, b` belong to the same single subset.
+
+
+Example
 ---------
 
 ```python
